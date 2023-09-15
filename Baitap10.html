@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baitap10</title>
+    <script langue="JavaScript">
+        <!-- Begin
+        function validate(){
+        var digits="0123456789"
+        var temp
+                if (document.testform.Name.value=="") {
+                        alert("No Name !")
+                return false
+                }
+                if (document.testform.age.value=="") {
+                        alert("Invalid Age !")
+                return false
+                }
+                for (var i=0;i<document.testform.age.value.length;i++){
+                        temp=document.testform.age.value.substring(i,i+1)
+                if (digits.indexOf(temp)==-1){
+                        alert("Invalid Age !")
+                return false
+                }}
+                return true}// End -->
+        </script>
+</head>
+        <body>
+        <form name="testform" onSubmit="return validate()">
+        Name:<input type="text" size=30 name="Name">
+        Age:<input type="text" size=3 name="age">
+        <input type="submit" value="Submit">
+        </form>
+</body>
+</html>

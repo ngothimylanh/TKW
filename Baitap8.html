@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Baitap8</title>
+        <script langue="JavaScript">
+        <!-- Begin
+        function customize(form) {
+                var address = document.form1.url.value;
+                var op_tool = (document.form1.tool.checked== true) ? 1 : 0;
+                var op_loc_box = (document.form1.loc_box.checked == true) ? 1 : 0;
+                var op_dir = (document.form1.dir.checked == true) ? 1 : 0;
+                var op_stat = (document.form1.stat.checked == true) ? 1 : 0;
+                var op_menu = (document.form1.menu.checked == true) ? 1 : 0;
+                var op_scroll = (document.form1.scroll.checked == true) ? 1 : 0;
+                var op_resize = (document.form1.resize.checked == true) ? 1 : 0;
+                var op_wid = document.form1.wid.value;
+                var op_heigh = document.form1.heigh.value;
+                var option = "toolbar="+ op_tool +",location="+ op_loc_box +",directories="
+                + op_dir +",status="+ op_stat +",menubar="+ op_menu +",scrollbars="
+                + op_scroll +",resizable=" + op_resize +",width=" + op_wid +",height="+ op_heigh;
+                var win3 = window.open("", "what_I_want", option);
+                var win4 = window.open(address, "what_I_want");
+        }
+        function clear(form) {
+                document.form1.wid.value="";
+                document.form1.heigh.value="";
+        }
+        // End -->
+        </script>
+</head>
+<body>
+<center><br>
+<table cellpadding=5 border><tr><td><pre>
+        <form name=form1 action="javascript:" method="post">
+        <input type="text" name="url" value="http://www.geocities.com">: URL
+        <input type="checkbox" name="tool">: Toolbar
+        <input type="checkbox" name="loc_box">: Location
+        <input type="checkbox" name="dir">: Directories
+        <input type="checkbox" name="stat">: Status
+        <input type="checkbox" name="menu">: Menubar
+        <input type="checkbox" name="scroll">: Scrollbars
+        <input type="checkbox" name="resize">: Resizable
+        <input type="text" name="wid" value= >: Width
+        <input type="text" name="heigh" value=>: Height<br><center>
+        <input type="button" value="=ENTER=" OnClick="customize(this.form)">
+        <input type="reset" value="=RESET=" onClick="clear(this.form)">
+        </pre></td></tr></table>
+        </form>
+</center>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BGDKCDV</title>
+    <style>
+     table{
+            width: 600px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        .ds{
+            text-align: left;
+        }
+         form {
+            width: 250px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>&emsp;BẢNG GIÁ ĐĂNG KÝ CƯỚC DỊCH VỤ INTERNET</h2>
+    <table>
+        <tr>
+            <th colspan="2">VNN</th>
+            <th colspan="2">FPT</th>
+        </tr>
+        <tr>
+            <th colspan="2">Cước truy cập Internet</th>
+            <th colspan="2">Thẻ kết nối Internet</th>
+        </tr>
+        <tr>
+            <th><i>Thời gian</i></th>
+            <th><i>Cước truy cập(đ/ph)</i></th>
+            <th><i>Số giờ kết nối</i></th>
+            <th><i>Mệnh giá thẻ</i></th>
+        </tr>
+        <tr>
+            <td>0h-07h</td>
+            <td>100</td>
+            <td>14h</td>
+            <td>100.000đ</td>
+        </tr>
+        <tr>
+            <td>07h-19h</td>
+            <td>210</td>
+            <td>33h</td>
+            <td>200.000đ</td>
+        </tr>
+        <tr>
+            <td>19h-24h</td>
+            <td>150</td>
+            <td>55h</td>
+            <td>300.000đ</td>
+        </tr>
+        <tr>
+            <th colspan="2">Cước thuê bao trong tháng: 27.273đ/tháng</th>
+            <th>110h</th>
+            <th>500.000đ</th>
+        </tr>
+    </table>
+    <h3>&emsp;NHẬP THÔNG TIN MUA THẺ</h3>
+    <form id="#">
+        <label for="name">Họ và tên:</label>
+        &ensp;<input type="text" id="name" name="name" required><br><br>
+        <label for="cmnd">Số CMND:</label>
+            <input type="text" id="cmnd" name="cmnd" required>
+        <h3><u>Đăng ký:</u></h3>
+        <label for="mua">Mua thẻ:</label><br>
+        &emsp;&emsp;<input type="radio" name="price"/>100.000đ<br>
+        &emsp;&emsp;<input type="radio" name="price"/>200.000đ<br>
+        &emsp;&emsp;<input type="radio" name="price"/>300.000đ<br>
+        &emsp;&emsp;<input type="radio" name="price"/>500.000đ<br><br>
+        &emsp;&emsp;<button type="button" id="update">Cập nhật</button>
+        <button type="button" id="cancel">Huỷ bỏ</button>
+    </form>
+</body>
+</html>
