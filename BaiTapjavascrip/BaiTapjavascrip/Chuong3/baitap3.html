@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>baitap3</title>
+<style>  
+    .date-input {
+        display: flex;
+        gap: 2px;
+    }
+</style>
+</head>
+<body>
+<h1>Bạn hãy nhập vào số lượng và giá:</h1>
+    <div class="date-input">
+        Số lượng: <input id="SoLuong" name="SoLuong" onKeyUp="TinhToan();"><br>
+        Đơn giá: <input id="DonGia" name="DonGia" onKeyUp="TinhToan();"><br>
+    </div>
+    <hr width="33%", align="left", color="red"/>
+    Thành tiền: <input id="ThanhTien" name="ThanhTien" disabled> USD
+    <script>
+        function TinhToan(){
+            var soLuong = document.getElementById("SoLuong").value;
+            var donGia = document.getElementById("DonGia").value;
+            var thanhTien = document.getElementById("ThanhTien");
+            if (soLuong !== "" && donGia !== ""){
+                thanhTien.value = soLuong * donGia;
+            }else{
+                thanhTien.value = "";
+            }}
+    </script>
+</body>
+</html>

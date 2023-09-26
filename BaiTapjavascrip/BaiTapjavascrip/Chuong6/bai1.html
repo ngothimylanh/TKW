@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bai1</title>
+</head>
+<body>
+    <h1 id="myHeading">Hello</h1>
+    <button onclick="changeText()">Thay đổi</button>
+<script>
+    function changeText() {
+        var userInput = prompt("Nhập vào xâu mới:");
+        if (userInput !== null) {
+            document.getElementById("myHeading").innerText = userInput;
+            // document.getElementById("myHeading").innerHTML = userInput;
+            // document.getElementById("myHeading").outerText = userInput;
+            // document.getElementById("myHeading").outerHTML = userInput;
+    }}
+</script>
+</body>
+</html>

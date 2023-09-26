@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bai3</title>
+    <style>
+        #layer1 {
+            position: absolute;
+            top: 100px; 
+            left: 0; 
+        }
+        #layer2 {
+            position: absolute;
+            top: 0; 
+            left: 100px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="layer1"><img src="img/anh.jpg"></div>
+    <div id="layer2"><img src="img/anh3.jpg"></div>
+    <script>
+        function DiChuyenTang1() {
+            var layer1 = document.getElementById("layer1");
+            var left = parseInt(layer1.style.left, 10) || 0;
+            if (left < window.innerWidth) {
+                left += 1;
+                layer1.style.left = left + "px";
+            } else {
+                clearInterval(interval1); 
+            }}
+        function DiChuyenTang2() {
+            var layer2 = document.getElementById("layer2");
+            var top = parseInt(layer2.style.top, 10) || 0;
+            if (top < window.innerHeight) {
+                top += 1;
+                layer2.style.top = top + "px";
+            } else {
+                clearInterval(interval2); 
+            }}
+        var interval1 = setInterval(DiChuyenTang1, 10); 
+        var interval2 = setInterval(DiChuyenTang2, 10); 
+    </script>
+</body>
+</html>

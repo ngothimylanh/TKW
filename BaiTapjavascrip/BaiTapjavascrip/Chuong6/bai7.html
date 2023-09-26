@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bai7</title>
+    <style>
+        #imageContainer {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+        #movingImage {
+            position: absolute;
+            left: 100%;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="imageContainer"><img id="movingImage" src="img/anh.jpg"></div>
+    <button onclick="diChuyenAnh()">Di chuyển</button>
+    <script>
+        function diChuyenAnh() {
+            var image = document.getElementById("movingImage");
+            var container = document.getElementById("imageContainer");
+            var pixelTop = 0;
+            var pixelLeft = 100;
+            var interval = setInterval(function () {
+                if (pixelTop >= container.clientHeight || pixelLeft <= 0) {
+                    clearInterval(interval); 
+                } else {
+                    pixelTop += 10; 
+                    pixelLeft -= 10;
+                    image.style.top = pixelTop + "px";
+                    image.style.left = pixelLeft + "px";
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>

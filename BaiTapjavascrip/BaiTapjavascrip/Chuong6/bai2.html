@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bai2</title>
+</head>
+<body>
+    <h1 id="clock" style="color: blue;">00:00:00</h1>
+    <script>
+        function CapNhat() {
+            var hienTai = new Date();
+            var gio = hienTai.getHours();
+            var phut = hienTai.getMinutes();
+            var giay = hienTai.getSeconds();
+            var thoiGian = gio.toString().padStart(2, '0') + ':' +
+                           phut.toString().padStart(2, '0') + ':' +
+                           giay.toString().padStart(2, '0');
+            document.getElementById("clock").innerText = thoiGian;
+        }
+        setInterval(CapNhat, 1000);
+        CapNhat();
+    </script>
+</body>
+</html>

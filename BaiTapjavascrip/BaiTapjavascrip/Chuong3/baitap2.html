@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>baitap2</title>
+<style>
+    .form-group input[type="text"],[type="password"],[type="date"] {
+        width: 10%;
+        padding: 5px;
+    }
+    input[type="button"] {
+        color: Gray;
+        border: none;
+        padding: 5px 15px;
+    }
+    .horizontal-form {
+        display: flex;
+        align-items: center;
+    }
+    .horizontal-form label {
+        margin-right: 10px;
+    }
+    .date-input {
+        display: flex;
+        gap: 5px;
+    }
+    .date-input input[type="text"] {
+        width: 30px;
+        height: 13px;
+    }
+    .custom-hr {
+        border: 3px solid red;
+        width: 35%;
+        margin-left: 0;
+    }
+</style>
+</head>
+<body>
+<h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Đăng ký hòm thư</h2>
+<hr class="custom-hr"><br>
+<form id="registration-form" onsubmit="return validateForm()">
+    <div class="form-group">
+        <label for="userName">User Name:</label>
+        <input type="text" id="userName" name="userName" onmouseout="clearHint()">
+    <div class="date-input">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" onmouseout="clearHint()">
+        <label for="confirmPassword">Gõ lại Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" onmouseout="clearHint()">
+    </div>
+    </div>
+    <div class="horizontal-form">
+        <label for="gender">Giới tính:</label>
+        <input type="radio" name="GioiTinh">Nam
+        <input type="radio" name="GioiTinh">Nu
+    </div>
+    <div class="date-input">
+        <label for="dob">Ngày/tháng/năm sinh:</label>
+        <input type="text" id="day" name="day">/
+        <input type="text" id="month" name="month">/
+        <input type="text" id="year" name="year">
+    </div><br>
+    <hr class="custom-hr"><br>
+    <input type="button" value="Đăng ký" onClick="DangKy();">
+</form>
+<script>
+    function DangKy(){
+        if (validateForm()){
+            document.getElementById("registration-form").submit();
+        }
+    }
+    function validateForm(){
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        var day = parseInt(document.getElementById("day").value);
+        var month = parseInt(document.getElementById("month").value);
+        var year = parseInt(document.getElementById("year").value);
+        if (password !== confirmPassword){
+            alert("Password phải giống nhau");
+            return false;
+        }
+        if (day < 1 || day > 31 || month < 1 || month > 12) {
+            alert("Ngày và tháng sinh không hợp lệ");
+            return false;
+        }
+            return true;
+    }
+</script>
+</body>
+</html>
